@@ -1,4 +1,4 @@
-FUNCTION insertion_sort_algorithm(arr : ARRAY_OF INTEGER[arr.length];) : INTEGER // Declare a function to run the insertion algorithm with the array called arr
+FUNCTION insertion_sorting(arr) : INTEGER // Declare a function to run the insertion algorithm with the array called arr
 VAR
   let currentElement = arr[i];  // set variables where currentElement is arr(index)
     let j = i - 1; // while a variable of j would be equal to the immediate left index after i
@@ -12,5 +12,19 @@ BEGIN
     END_WHILE
     arr[j + 1] = currentElement;
   END_FOR
-  RETURN value ;
+  RETURN arr ;
+END
+
+
+///////////////////////////////// Algorithm that reads a users input of array and helps sort the array for them
+ALGORITHM insertion_sort_algorithm
+VAR
+  arr : ARRAY_OF INTEGER[arr.length];
+BEGIN
+  Write("Input the list of numbers")// User inputing array numbers
+  Read(arr)// Read the inputs of Array
+
+  insertion_sorting(arr)// Call the fuction that sorts out an array through insertion
+
+  Write(arr)// Write out the sorted value of array back to user
 END

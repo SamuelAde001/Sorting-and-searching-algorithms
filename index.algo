@@ -20,11 +20,12 @@ END
 ALGORITHM insertion_sort_algorithm
 VAR
   arr : ARRAY_OF INTEGER[arr.length];
+  arrayLengthCounter : Integer := 0;
 BEGIN
   Write("Input the list of numbers")// User inputing array numbers
   Read(arr)// Read the inputs of Array
 
-  insertion_sorting(arr)// Call the fuction that sorts out an array through insertion
-
+  function insertion_sorting(arr)// Call the fuction that sorts out an array through insertion
+  arrayLengthCounter = arrayLengthCounter + arr.length
   Write(arr)// Write out the sorted value of array back to user
 END
